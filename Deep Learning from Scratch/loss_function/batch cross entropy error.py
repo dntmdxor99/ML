@@ -9,6 +9,7 @@ def batch_cross_entropy_error(pred, target):
 
     batch_size = pred.shape[0]
     return -np.sum(target * np.log(pred + 1e-7)) / batch_size
+    # return -np.sum(np.log(target[np.arange(batch_size), target] + 1e-7)) / batch_size
 
 
 if __name__ == "__main__":
@@ -24,6 +25,7 @@ if __name__ == "__main__":
                            [0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1], [0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1], [0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1],
                            [0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1], [0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1], [0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1],
                            [0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1]])
+    # pred_batch = np.array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
 
     error = batch_cross_entropy_error(pred_batch, target_batch)
 
