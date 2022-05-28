@@ -1,4 +1,2 @@
-# ML
-Machine Learning / AI
-
-ML / AI study
+# Artificial Intelligence, Machine Learning, Deep Learning  
+## Convolution Neural Network & Computer Vision
