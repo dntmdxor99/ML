@@ -10,4 +10,10 @@
   <li>과제 7 : Smaller GAN</li>
   <li>과제 8 : XAI + MLP</li>
   <li>과제 9 : NLP 실습</li>
+  <ul>
+    <h4>
+    <li>9_1 : Machine Translation</li>
+    <li>9_2 : Image Captioning</li>
+    <li>9_3 : Natural Language Image search with a Dual Encoder</li>
+  </ul>
 </ul>
