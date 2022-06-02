@@ -16,4 +16,5 @@
     <li>9_2 : Image Captioning</li>
     <li>9_3 : Natural Language Image search with a Dual Encoder</li> : Downgrade Tensorflow version to 2.4.1 to run Tensorflow_text
   </ul>
+  <li>과제 10 : Computer Vision</li>
 </ul>
