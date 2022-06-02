@@ -15,6 +15,7 @@
     <li>9_1 : Machine Translation</li>
     <li>9_2 : Image Captioning</li>
     <li>9_3 : Natural Language Image search with a Dual Encoder</li> : Downgrade Tensorflow version to 2.4.1 to run Tensorflow_text
+      <li>9_4 : Text Classification From Scratch</li>
   </ul>
   <li>과제 10 : Computer Vision</li>
 </ul>
