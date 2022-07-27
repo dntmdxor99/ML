@@ -19,10 +19,10 @@ def parse_args():
     parser.add_argument("--degradation", type=str, default='BI')
     parser.add_argument("--scale", type=int, default=3)
     parser.add_argument('--gpu_mode', type=bool, default=True)
-    parser.add_argument('--testset_dir', type=str, default='/example')
+    parser.add_argument('--testset_dir', type=str, default='/home/knuviuser2/woo/SOF-VSR/TIP/dataset')
     parser.add_argument('--chop_forward', type=bool, default=False)
 
-    parser.add_argument('--T', type=int, default='T1')
+    parser.add_argument('--T', type=str, default='T1')
 
     return parser.parse_args()
 
@@ -75,7 +75,7 @@ def main(cfg):
         video_list = os.listdir(cfg.testset_dir)
         
         video_list.sort()
-        # video_list = video_list[13:]
+        video_list = video_list[13:]
         
         for idx_video in range(len(video_list)):
             video_name = video_list[idx_video]
@@ -131,13 +131,13 @@ def main(cfg):
                 #     os.mkdir('results/Vid3/' + cfg.degradation + '_x' + str(cfg.scale) + '/' + video_name)
                 # SR_rgb.save('results/Vid3/' + cfg.degradation + '_x' + str(cfg.scale) + '/' + video_name + '/sr_' + str(idx_iter+2).rjust(2,'0') + '.png')
                 
-                if not os.path.exists('results/Vid3'):
-                    os.mkdir('results/Vid3')
-                if not os.path.exists('results/Vid3/' + video_name:
-                    os.mkdir('results/Vid3/' + video_name
-                if not os.path.exists('results/Vid3/' + video_name + '/' + cfg.T):
-                    os.mkdir('results/Vid3/' + video_name + '/' + cfg.T)
-                SR_rgb.save('results/Vid3/' + video_name + '/' + cfg.T + '/' + str(num).rjust(8,'0') + '.png')
+                if not os.path.exists('results/'):
+                    os.mkdir('results/')
+                if not os.path.exists('results/' + video_name):
+                    os.mkdir('results/' + video_name)
+                if not os.path.exists('results/' + video_name + '/' + cfg.T):
+                    os.mkdir('results/' + video_name + '/' + cfg.T)
+                SR_rgb.save('results/' + video_name + '/' + cfg.T + '/' + str(num).rjust(8,'0') + '.png')
 
 
 if __name__ == '__main__':
