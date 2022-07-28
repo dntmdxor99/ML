@@ -13,6 +13,6 @@ def function_2(x):
     return x[0] ** 2 + x[1] ** 2
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  
     value = numerical_diff(function_1, 5)
     print(value)
