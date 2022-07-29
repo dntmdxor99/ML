@@ -1,6 +1,8 @@
 import sys,os
 import numpy as np
-sys.path.append(os.path.dirname(os.path.dirname(__file__)))
+# sys.path.append(os.path.dirname(os.path.dirname(__file__)))
+# from Differential import numerical_gradient, numerical_diff
+sys.path.append('..')
 from Differential import numerical_gradient, numerical_diff
 
 
