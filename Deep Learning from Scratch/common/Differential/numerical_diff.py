@@ -16,3 +16,4 @@ def function_2(x):
 if __name__ == "__main__":  
     value = numerical_diff(function_1, 5)
     print(value)
+    
