@@ -34,6 +34,7 @@ if __name__ == "__main__":
 
     p = net.predict(x)
     print("network predict : ", p)
+    
 
     t = np.array([0, 0, 1])
     loss = net.loss(x, t)
