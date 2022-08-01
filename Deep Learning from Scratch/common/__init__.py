@@ -1,3 +1,7 @@
+import os, sys
+sys.path.append(os.path.dirname(__file__))
+# print(*sys.path, sep='\n')
+
 from Activation_Function.ReLU_Function import ReLU
 from Activation_Function.Sigmoid_Function import sigmoid
 from Activation_Function.Softmax_Function import softmax
