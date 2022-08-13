@@ -1,4 +1,3 @@
-from turtle import forward
 import numpy as np
 
 
@@ -62,4 +61,10 @@ class Affine:
         self.db = np.sum(dout, axis = 0)
 
         return dx
+
+
+class SOftmaxWithLoss:
+    def __init__(self) -> None:
+        self.loss = None
+
 
