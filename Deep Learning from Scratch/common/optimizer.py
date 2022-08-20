@@ -41,3 +41,4 @@ class AdaGrad(SGD):
                 self.h[key] += grads[key] * grads[key]
                 grads[key] -= self.lr * grads[key] / (np.sqrt(self.h[key] + 1e-7))
 
+
