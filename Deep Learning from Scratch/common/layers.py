@@ -1,4 +1,6 @@
 import numpy as np
+from Activation_Function.Softmax_Function import softmax
+from Loss_Function.cross_entropy_error import cross_entropy
 
 
 class Relu:
@@ -63,8 +65,22 @@ class Affine:
         return dx
 
 
-class SOftmaxWithLoss:
+class SoftmaxWithLoss:
     def __init__(self) -> None:
         self.loss = None
+        self.y = None
+        self.x = None
+
+    def forward(self, x, t):
+        self.t = t
+        self.y = softmax(x)
+        self.loss = cross_entropy(self.y, self.t)
+
+        return self.loss
 
 
+    def backward(self, dout = 1):
+        batch_size = self.t.shape[0]
+        dx = (self.y - self.t) / batch_size
+
+        return dx
