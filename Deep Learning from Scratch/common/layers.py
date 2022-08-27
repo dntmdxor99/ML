@@ -160,7 +160,22 @@ class Pooling:
         dcol = dmax.reshape(dmax.shape[0] * dmax.shape[1] * dmax.shape[2], -1)
         dx = col2im(dcol, self.x.shape, self.pool_h, self.pool_w, self.stride, self.pad)
         
-        return 
+        return dx
+
+        
+    """
+    def backward(self, dout):       # dout = (1, 1, 1, 1)
+        dout = dout.transpose(0, 2, 3, 1)       # dout = (1, 1, 1, 1)
+        
+        pool_size = self.pool_h * self.pool_w       # (1, 2, 2) max pooling 가정, pool_size = 4
+        dmax = np.zeros((dout.size, pool_size))     # dmax = (1, 4), [[0., 0., 0., 0.,]]
+        dmax[np.arange(self.arg_max.size), self.arg_max.flatten()] = dout.flatten()     # 
+        dmax = dmax.reshape(dout.shape + (pool_size,)) 
+        
+        dcol = dmax.reshape(dmax.shape[0] * dmax.shape[1] * dmax.shape[2], -1)
+        dx = col2im(dcol, self.x.shape, self.pool_h, self.pool_w, self.stride, self.pad)
+        
+        return dx"""
 
 
 if __name__ == "__main__":
