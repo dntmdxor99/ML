@@ -148,7 +148,6 @@ class Pooling:
 
         return out
 
-
     
     def backward(self, dout):
         dout = dout.transpose(0, 2, 3, 1)
