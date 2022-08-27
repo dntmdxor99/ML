@@ -1,3 +1,4 @@
+from typing import Collection
 import numpy as np
 from Activation_Function.Softmax_Function import softmax
 from Loss_Function.cross_entropy_error import cross_entropy
